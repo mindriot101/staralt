@@ -58,7 +58,9 @@ ImmutableMultiDict([
         ('form[sitecoord]', u'')])
 ```
 
+
 ### Example usage
+
 
 ``` python
 import staralt
