@@ -56,3 +56,24 @@ ImmutableMultiDict([
         ('form[format]', u'gif'), 
         ('form[sitecoord]', u'')])
 ```
+
+### Example usage
+
+``` python
+import staralt
+from datetime import datetime
+
+s = staralt.StartAlt()
+s.mode = "starobs"
+
+s.date = datetime(2014, 4, 30)
+
+s.coordinates = [
+    staralt.Coordinate(name="kepler_field", ra="19 30 24", dec="46 50 12"),
+    ]
+
+s.moon_distance = True
+s.min_elevation = 30
+
+s.save_image("image.gif")
+```
