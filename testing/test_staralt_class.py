@@ -31,3 +31,14 @@ def test_sufficient_parameters(mock_coordinate):
     assert s.min_elevation == 30
 
     assert s.insufficient_parameters() == True
+
+def test_parse_date():
+    s = StarAlt()
+    s.date = date(2014, 5, 1)
+    result = s._parse_date()
+    assert result == {
+            'form[day]': '1',
+            'form[month]': '5',
+            'form[year]': '2014',
+            }
+

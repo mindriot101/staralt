@@ -21,3 +21,11 @@ class StarAlt(object):
     def insufficient_parameters(self):
         return all(getattr(self, param) is not None
                 for param in self.REQUIRED_PARAMS)
+
+    def _parse_date(self):
+        return {
+                'form[day]': str(self.date.day),
+                'form[month]': str(self.date.month),
+                'form[year]': str(self.date.year),
+                }
+
