@@ -61,7 +61,8 @@ def test_negative_dec_coordinate():
 def test_upload_format(coordinate):
     expected_ra = (19. + (30. / 60.) + (24. / 3600.)) * 15.
     expected_dec = (46. + (50. / 60.) + (12. / 3600.))
-    assert coordinate.upload_string() == 'kepler_field {} {}'.format(expected_ra, expected_dec)
+    assert coordinate.upload_string() == 'kepler_field {ra} {dec}'.format(
+            ra=expected_ra, dec=expected_dec)
 
 
 
