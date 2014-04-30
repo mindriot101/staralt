@@ -66,6 +66,14 @@ from datetime import datetime
 s = staralt.StartAlt()
 s.mode = "starobs"
 
+# Alternatively 
+# s = staralt.StartAlt.starobs()
+# s = staralt.StartAlt.startrack()
+# s = staralt.StartAlt.starmult()
+# s = staralt.StartAlt.staralt()
+
+# All options can be passed in as keyword arguments
+
 s.date = datetime(2014, 4, 30)
 
 s.coordinates = [
