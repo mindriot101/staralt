@@ -1,4 +1,4 @@
-from staralt.staralt import StarAlt, InsufficientParameters
+from staralt.staralt import *
 import pytest
 import mock
 from datetime import date
@@ -12,11 +12,13 @@ def test_fail_with_invalid_parameters(mock_staralt):
 
 @mock.patch('requests.get')
 @mock.patch.object(StarAlt, 'insufficient_parameters', return_value=False)
-def test_success_with_valid_parameters(mock_staralt, mock_get):
+@mock.patch.object(StarAlt, 'invalid_mode', return_value=False)
+def test_success_with_valid_parameters(mock_mode, mock_staralt, mock_get):
     s = StarAlt()
     s.save_image("image.gif")
 
-def test_insufficient_parameters():
+@mock.patch.object(StarAlt, 'invalid_mode', return_value=False)
+def test_insufficient_parameters(mock_mode):
     s = StarAlt()
     assert s.insufficient_parameters() == False
 
@@ -64,3 +66,18 @@ def test_min_elevation():
     s.min_elevation = 30
     assert s._parse_min_elevation() == {
             'form[minangle]': '30'}
+
+@mock.patch('requests.get')
+@mock.patch.object(StarAlt, 'insufficient_parameters', return_value=False)
+def test_invalid_mode(mock_params, mock_get):
+    s = StarAlt()
+    s.mode = 'not_valid_mode'
+    with pytest.raises(InvalidMode) as err:
+        s.save_image("output.gif")
+
+@mock.patch('requests.get')
+@mock.patch.object(StarAlt, 'insufficient_parameters', return_value=False)
+def test_valid_mode(mock_parameters, mock_requests):
+    s = StarAlt()
+    s.mode = "starobs"
+    s.save_image("output.gif")

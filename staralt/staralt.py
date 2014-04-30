@@ -1,4 +1,11 @@
-class InsufficientParameters(RuntimeError): pass
+class InsufficientParameters(RuntimeError):
+    def __init__(self):
+        super(InsufficientParameters, self).__init__("Insufficient parameters "
+        "set on StarAlt class")
+
+class InvalidMode(RuntimeError):
+    def __init__(self, mode_parameter):
+        super(InvalidMode, self).__init__("Invalid mode parameter: {0}".format(mode_parameter))
 
 class StarAlt(object):
     DEFAULT_MOON_DISTANCE = True
@@ -6,6 +13,8 @@ class StarAlt(object):
 
     REQUIRED_PARAMS = ['mode', 'date', 'coordinates',
             'moon_distance', 'min_elevation']
+
+    ALLOWED_MODES = ['starobs', 'startrack', 'starmult', 'staralt']
 
     def __init__(self):
         self.moon_distance = self.DEFAULT_MOON_DISTANCE
@@ -18,9 +27,16 @@ class StarAlt(object):
         if self.insufficient_parameters():
             raise InsufficientParameters
 
+        if self.invalid_mode():
+            raise InvalidMode(self.mode)
+
     def insufficient_parameters(self):
         return all(getattr(self, param) is not None
                 for param in self.REQUIRED_PARAMS)
+
+    def invalid_mode(self):
+        if self.mode not in self.ALLOWED_MODES:
+            raise InvalidMode(self.mode)
 
     def _parse_date(self):
         return {
