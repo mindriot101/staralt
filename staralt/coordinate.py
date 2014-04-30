@@ -24,7 +24,8 @@ class Coordinate(object):
             elif ' ' in coordinate:
                 parts = coordinate.split()
             else:
-                raise CannotParseCoordinate("cannot parse {}".format(coordinate))
+                raise CannotParseCoordinate("cannot parse {coordinate}".format(
+                    coordinate=coordinate))
 
             parts = list(map(float, parts))
             if parts[0] < 0:
