@@ -51,3 +51,11 @@ def test_parse_coordinates(mock_coordinate):
     assert s._parse_coordinates() == {'form[coordlist]': 
     'kepler_field 30.0 49.0\nkepler_field 30.0 49.0'}
 
+def test_parse_moon_distance():
+    s = StarAlt()
+    s.moon_distance = True
+
+    assert s._parse_moon_distance() == {
+            'form[paramdist]': '2',
+            }
+

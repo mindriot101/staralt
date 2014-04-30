@@ -34,3 +34,7 @@ class StarAlt(object):
                 'form[coordlist]': 
                 '\n'.join([c.upload_string() for c in self.coordinates])}
 
+    def _parse_moon_distance(self):
+        if self.moon_distance:
+            return {'form[paramdist]': '2'}
+
