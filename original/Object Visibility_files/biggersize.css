@@ -1,0 +1,23 @@
+body {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; margin-left:2em; margin-right: 1em }
+th   {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-weight: bold; background-color: #D3DCE3;}
+td   {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt;}
+form   {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt}
+A:link    {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; text-decoration: none; color: blue}
+A:visited {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; text-decoration: none; color: blue}
+A:hover   {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; text-decoration: none; color: red}
+a.plain {text-decoration: none} 
+a.plain:hover {background: #000099; color: #D3DCE3;}
+a:link, a:visited { color: #000099}, a:active { color : #990000}, a:hover {color: #990000}
+.head {color: #000080; text-align: right; width: 70%; font-family: arial, helvetica, times; margin-left: -1.5em; margin-top: 1.5em}
+.topnav    {color: #0000FF; font-family: arial, helvetica; font-weight: bold; font-size: 12pt}
+.itemleft  {color: #FFFF33; font-family: arial, helvetica; text-align: center; font-weight: bold; font-size: 12pt}
+.itemright {color: #000000; font-family: arial, helvetica; font-size: 12pt}
+.thead  {color: #FFFFFF; text-align: center; font-family: arial, helvetica, times; font-weight: bold}
+.lhead  {color: #FFFFFF; text-align: left; font-family: arial, helvetica, times; font-weight: bold}
+.tcont  {margin-top: 0.3em; margin-left: 0.2em; margin-bottom: 0.2em; font-family: arial, helvetica, times}
+.gen    {font-family: arial, helvetica, times; font-size: 12pt}
+.nav {color: #0000FF; text-align: center; padding-bottom: 0.2em; font-family: arial, helvetica, times; font-size: 12pt}
+.icon {color: #999999; text-decoration: none}
+H1 {color: #000080}
+H2 {color: #000080}
+H3 {color: #000080}

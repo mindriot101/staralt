@@ -1,0 +1,23 @@
+body {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; margin-left:2em; margin-right: 1em; font-weight: bold}
+th   {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold; background-color: #D3DCE3;}
+td   {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold}
+form   {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold}
+A:link    {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; text-decoration: none; color: blue; font-weight: bold}
+A:visited {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; text-decoration: none; color: blue; font-weight: bold}
+A:hover   {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; text-decoration: none; color: red; font-weight: bold}
+a.plain {text-decoration: none; font-weight: bold} 
+a.plain:hover {background: #000099; color: #D3DCE3; font-weight: bold}
+a:link, a:visited { color: #000099; font-weight: bold}, a:active { color : #990000; font-weight: bold}, a:hover {color: #990000; font-weight: bold}
+.head {color: #000080; text-align: right; width: 70%; font-family: arial, helvetica, times; margin-left: -1.5em; margin-top: 1.5em; font-weight: bold}
+.topnav    {color: #0000FF; font-family: arial, helvetica; font-weight: bold; font-size: 10pt; font-weight: bold}
+.itemleft  {color: #FFFF33; font-family: arial, helvetica; text-align: center; font-weight: bold; font-size: 12pt; font-weight: bold}
+.itemright {color: #000000; font-family: arial, helvetica; font-size: 12pt; font-weight: bold}
+.thead  {color: #FFFFFF; text-align: center; font-family: arial, helvetica, times; font-weight: bold}
+.lhead  {color: #FFFFFF; text-align: left; font-family: arial, helvetica, times; font-weight: bold}
+.tcont  {margin-top: 0.3em; margin-left: 0.2em; margin-bottom: 0.2em; font-family: arial, helvetica, times; font-weight: bold}
+.gen    {font-family: arial, helvetica, times; font-size: 12pt; font-weight: bold}
+.nav {color: #0000FF; text-align: center; padding-bottom: 0.2em; font-family: arial, helvetica, times; font-size: 10pt; font-weight: bold}
+.icon {color: #999999; text-decoration: none; font-weight: bold}
+H1 {color: #000080; font-weight: bold}
+H2 {color: #000080; font-weight: bold}
+H3 {color: #000080; font-weight: bold}

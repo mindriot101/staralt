@@ -1,0 +1,75 @@
+body {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; margin-left:2em; margin-right: 1em }
+th   {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold; background-color: #D3DCE3;}
+td   {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt;}
+form   {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+
+a.plain {text-decoration: none; face: bold} 
+a.plain:hover {background: #000099; color: #D3DCE3; ; face: bold}
+a:link, a:visited { color: #000099; face: bold}, a:active { color : #990000; face: bold}, a:hover {color: #990000; face: bold}
+
+A:link    {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; text-decoration: none; color: blue; face: bold}
+A:visited {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; text-decoration: none; color: blue; face: bold}
+A:hover   {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; text-decoration: none; color: #990000; face: bold}
+a:hover {background: #000099; color: #D3DCE3; ; face: bold}
+
+.head {color: #000080; text-align: left; width: 70%; font-family: arial, helvetica, times; margin-top: 1.5em}
+.topnav    {color: #0000FF; font-family: arial, helvetica; font-weight: bold; font-size: 10pt}
+.item  {color: #FFFF33; font-family: arial, helvetica; text-align: left; font-weight: bold; font-size: 12pt}
+.itemleft  {color: #FFFF33; font-family: arial, helvetica; text-align: center; font-weight: bold; font-size: 12pt}
+.itemright {color: #000000; font-family: arial, helvetica; font-size: 12pt}
+.thead  {color: #FFFFFF; text-align: center; font-family: arial, helvetica, times; font-weight: bold}
+.lhead  {color: #FFFFFF; text-align: left; font-family: arial, helvetica, times; font-weight: bold}
+.tcont  {margin-top: 0.3em; margin-left: 0.2em; margin-bottom: 0.2em; font-family: arial, helvetica, times}
+.gen    {font-family: arial, helvetica, times; font-size: 12pt}
+.nav {color: #0000FF; text-align: center; padding-bottom: 0.2em; font-family: arial, helvetica, times; font-size: 10pt}
+.icon {color: #999999; text-decoration: none}
+H1 {color: #000080}
+H2 {color: #000080}
+H3 {color: #000080}
+
+
+td.row1 { background-color: #EFEFEF; }
+td.row2 { background-color: #DEE3E7; }
+td.row3 { background-color: #D1D7DC; }
+#td.row3        { background-color: #FFCC99; }
+td.row4 { background-color: #CCDDFF; }
+td.row5 { background-color: #CCCCCC; }
+td.row_new { background-color: #A3EC06; }
+td.row_sci { background-color: #FFFFCC; }
+td.row_ph2 { background-color: #CCDDFF; }
+td.row_tec { background-color: #FBBE06; }
+td.row_act { background-color: #EFEFEF; }
+td.row_rec { background-color: #D1D7DC; }
+td.format { text-align: center; background-color: #D1D7DC; font-size: xx-small; }
+td.science0 { background-color: #009900; }
+#td.science1 { background-color: #FF6666; }
+td.science1 { background-color: #33CC33; }
+#td.science2 { background-color: #FF9999; }
+td.science2 { background-color: #66FF66; }
+#td.science3 { background-color: #FFcccc; }
+td.science3 { background-color: #CCFFCC; }
+td.blind { background-color: #FFFFFF; }
+td.calibration { background-color: #FFFFCC; }
+td.calibration1 { background-color: #FFFF99; }
+td.yellow { background-color: #FFFFCC; }
+td.yellowl { background-color: #FFFFCC; }
+td.green { background-color: #33CC33; }
+td.greenl { background-color: #CCFFCC; }
+td.greens { background-color: #33FF99; }
+td.red { background-color: #FF6666; }
+td.redl { background-color: #FF9999; }
+td.blue1 { background-color: #66CCFF; }
+td.blue2 { background-color: #CCFFFF; }
+td.bluel { background-color: #CCFFFF; }
+td.blue { background-color: #99FFFF; }
+td.greyl { background-color: #D1D7DC; }
+td.continuing { background-color: #FF9999; }
+td.continuing1 { background-color: #FF6666; }
+td.prio1 { background-color: #000080; }
+td.prio2 { background-color: #66CCFF; }
+td.prio3 { background-color: #CCFFFF; }
+td.pinkl { background-color: #FFCCFF; }
+td.pinks { background-color: #FF66FF; }
+td.salmon { background-color: #FFCCCC; }
+td.violet { background-color: #CCCCFF; }
+td.attempted { background-color: #FFCCCC; }
