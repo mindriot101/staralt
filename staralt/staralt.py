@@ -38,3 +38,5 @@ class StarAlt(object):
         if self.moon_distance:
             return {'form[paramdist]': '2'}
 
+    def _parse_min_elevation(self):
+        return {'form[minangle]': str(self.min_elevation)}

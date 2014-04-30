@@ -59,3 +59,8 @@ def test_parse_moon_distance():
             'form[paramdist]': '2',
             }
 
+def test_min_elevation():
+    s = StarAlt()
+    s.min_elevation = 30
+    assert s._parse_min_elevation() == {
+            'form[minangle]': '30'}
