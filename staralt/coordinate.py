@@ -26,7 +26,7 @@ class Coordinate(object):
             else:
                 raise CannotParseCoordinate("cannot parse {}".format(coordinate))
 
-            parts = map(float, parts)
+            parts = list(map(float, parts))
             if parts[0] < 0:
                 return -(-parts[0] + (parts[1] / 60.) + (parts[2] / 3600.))
             else:
