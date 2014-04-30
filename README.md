@@ -61,7 +61,7 @@ ImmutableMultiDict([
 
 ``` python
 import staralt
-from datetime import datetime
+from datetime import date
 
 s = staralt.StartAlt()
 s.mode = "starobs"
@@ -74,14 +74,12 @@ s.mode = "starobs"
 
 # All options can be passed in as keyword arguments
 
-s.date = datetime(2014, 4, 30)
-
+s.date = date(2014, 4, 30)
 s.coordinates = [
     staralt.Coordinate(name="kepler_field", ra="19 30 24", dec="46 50 12"),
     ]
-
-s.moon_distance = True
-s.min_elevation = 30
+s.moon_distance = True                  # Defaults to True
+s.min_elevation = 30                    # Defaults to 30
 
 s.save_image("image.gif")
 ```
