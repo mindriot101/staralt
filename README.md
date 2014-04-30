@@ -37,3 +37,22 @@ The form has the following form:
     * `option` value: gif, selected="", text: Gif-HTML
     * `option` value: ps, text: Postscript-Text
 * `input` type: submit, name: submit
+
+### Example response
+
+```
+ImmutableMultiDict([
+        ('form[month]', u'04'), 
+        ('form[coordlist]', u'kepler_field 19 03 35 +49 20 06'), 
+        ('form[day]', u'30'), 
+        ('form[mode]', u'1'), 
+        ('submit', u' Retrieve '), 
+        ('form[minangle]', u'30'), 
+        ('action', u'showImage'), 
+        ('form[year]', u'2014'), 
+        ('form[paramdist]', u'2'), 
+        ('form[obs_name]', u'Roque de los Muchachos Observatory 
+         (La Palma, Spain)'), 
+        ('form[format]', u'gif'), 
+        ('form[sitecoord]', u'')])
+```
