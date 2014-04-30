@@ -30,5 +30,7 @@ class StarAlt(object):
                 }
 
     def _parse_coordinates(self):
-        return '\n'.join([c.upload_string() for c in self.coordinates])
+        return {
+                'form[coordlist]': 
+                '\n'.join([c.upload_string() for c in self.coordinates])}
 

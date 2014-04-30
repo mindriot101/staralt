@@ -48,5 +48,6 @@ def test_parse_coordinates(mock_coordinate):
     s = StarAlt()
     s.coordinates = [mock_coordinate, mock_coordinate]
 
-    assert s._parse_coordinates() == 'kepler_field 30.0 49.0\nkepler_field 30.0 49.0'
+    assert s._parse_coordinates() == {'form[coordlist]': 
+    'kepler_field 30.0 49.0\nkepler_field 30.0 49.0'}
 
