@@ -42,3 +42,11 @@ def test_parse_date():
             'form[year]': '2014',
             }
 
+@mock.patch('staralt.coordinate.Coordinate')
+def test_parse_coordinates(mock_coordinate):
+    mock_coordinate.upload_string.return_value = 'kepler_field 30.0 49.0'
+    s = StarAlt()
+    s.coordinates = [mock_coordinate, mock_coordinate]
+
+    assert s._parse_coordinates() == 'kepler_field 30.0 49.0\nkepler_field 30.0 49.0'
+

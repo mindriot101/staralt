@@ -29,3 +29,6 @@ class StarAlt(object):
                 'form[year]': str(self.date.year),
                 }
 
+    def _parse_coordinates(self):
+        return '\n'.join([c.upload_string() for c in self.coordinates])
+
