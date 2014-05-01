@@ -91,3 +91,10 @@ def test_valid_site_coordinates(mock_get):
     result = s._parse_site()
     assert result == {
             'form[sitecoord]': '{} {} {} {}'.format(6., 46., 400, 1)}
+
+def test_alternate_constructors():
+    fn_names = ['starobs', 'startrack', 'starmult', 'staralt']
+    for name in fn_names:
+        fn = getattr(StarAlt, name)
+        s = fn()
+        assert s.mode == name

@@ -23,6 +23,30 @@ class StarAlt(object):
         self.date = None
         self.coordinates = []
 
+    @classmethod
+    def starobs(cls):
+        s = cls()
+        s.mode = 'starobs'
+        return s
+
+    @classmethod
+    def startrack(cls):
+        s = cls()
+        s.mode = 'startrack'
+        return s
+
+    @classmethod
+    def starmult(cls):
+        s = cls()
+        s.mode = 'starmult'
+        return s
+
+    @classmethod
+    def staralt(cls):
+        s = cls()
+        s.mode = 'staralt'
+        return s
+
     def save_image(self, filename):
         if self.insufficient_parameters():
             raise InsufficientParameters
