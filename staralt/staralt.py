@@ -62,5 +62,9 @@ class StarAlt(object):
         altitude, utc_offset = self.site_location.get('altitude', ''), self.site_location.get('utc-offset', '')
         return {
                 'form[sitecoord]':
-                "{} {} {} {}".format(latitude, longitude, altitude, utc_offset).strip()
+                "{latitude} {longitude} {altitude} {utc_offset}".format(
+                    latitude=latitude,
+                    longitude=longitude,
+                    altitude=altitude,
+                    utc_offset=utc_offset).strip()
                 }
