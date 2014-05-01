@@ -47,7 +47,7 @@ class StarAlt(object):
 
     def _parse_coordinates(self):
         return {
-                'form[coordlist]': 
+                'form[coordlist]':
                 '\n'.join([c.upload_string() for c in self.coordinates])}
 
     def _parse_moon_distance(self):
@@ -56,3 +56,11 @@ class StarAlt(object):
 
     def _parse_min_elevation(self):
         return {'form[minangle]': str(self.min_elevation)}
+
+    def _parse_site(self):
+        latitude, longitude = self.site_location['latitude'], self.site_location['longitude']
+        altitude, utc_offset = self.site_location.get('altitude', ''), self.site_location.get('utc-offset', '')
+        return {
+                'form[sitecoord]':
+                "{} {} {} {}".format(latitude, longitude, altitude, utc_offset).strip()
+                }

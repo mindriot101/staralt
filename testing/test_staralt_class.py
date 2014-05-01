@@ -50,7 +50,7 @@ def test_parse_coordinates(mock_coordinate):
     s = StarAlt()
     s.coordinates = [mock_coordinate, mock_coordinate]
 
-    assert s._parse_coordinates() == {'form[coordlist]': 
+    assert s._parse_coordinates() == {'form[coordlist]':
     'kepler_field 30.0 49.0\nkepler_field 30.0 49.0'}
 
 def test_parse_moon_distance():
@@ -81,3 +81,13 @@ def test_valid_mode(mock_parameters, mock_requests):
     s = StarAlt()
     s.mode = "starobs"
     s.save_image("output.gif")
+
+@mock.patch('requests.get')
+def test_valid_site_coordinates(mock_get):
+    s = StarAlt()
+    s.site_location = {'latitude': 6., 'longitude': 46.,
+            'altitude': 400, 'utc-offset': 1}
+
+    result = s._parse_site()
+    assert result == {
+            'form[sitecoord]': '{} {} {} {}'.format(6., 46., 400, 1)}
