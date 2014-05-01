@@ -90,7 +90,7 @@ def test_valid_site_coordinates(mock_get):
 
     result = s._parse_site()
     assert result == {
-            'form[sitecoord]': '{} {} {} {}'.format(6., 46., 400, 1)}
+            'form[sitecoord]': '{0} {1} {2} {3}'.format(6., 46., 400, 1)}
 
 def test_alternate_constructors():
     fn_names = ['starobs', 'startrack', 'starmult', 'staralt']
